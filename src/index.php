@@ -1,2 +1,4 @@
 <?php
-phpinfo();
+echo 'Hola';
+?>
+<a href="admin/">Dashboard</a>
