@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,33 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
+
 <body>
 
-    <h1>Loker</h1>
-    <i class="fa-brands fa-cash-app fa-2x"></i>
-    
+    <header class="px-5 py-3">
+        <h1><i class="fa-brands fa-cash-app fa-1x"></i>Loker</h1>
+        
+    </header>
+
+    <div class="container my-4" id="contenido">
+        Cargando...
+    </div>
+
+    <script>
+        fetch('/admin/read.php')
+            .then(res => {
+                if (!res.ok) throw new Error('Error HTTP');
+                return res.text();
+            })
+            .then(html => {
+                document.getElementById('contenido').innerHTML = html;
+            })
+            .catch(err => {
+                document.getElementById('contenido').innerHTML = 'Error al cargar 😬';
+                console.error(err);
+            });
+    </script>
+
 </body>
+
 </html>
