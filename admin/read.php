@@ -16,5 +16,5 @@ $result = $stmt->get_result();
             <td><?= $row['code'] ?></td>
             <td><?= $row['name'] ?></td>
         </tr>
-        <?php endwhile; ?>
+    <?php endwhile; ?>
 </table>
