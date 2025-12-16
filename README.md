@@ -1,2 +1,2 @@
 # Loker
-Aplication web for entrepenur smal and comercials stores
+Aplication web for entrepenur small and comercials stores
