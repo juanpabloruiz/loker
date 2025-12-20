@@ -32,6 +32,7 @@ services:
       MARIADB_RANDOM_ROOT_PASSWORD: "yes"
     volumes:
       - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: unless-stopped
 
   phpmyadmin:
