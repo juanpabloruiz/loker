@@ -2,12 +2,12 @@
 
 // Datos de ejemplo
 $servidor = getenv('DB_HOST');
-$base_de_datos = getenv('DB_NAME');
 $usuario = getenv('DB_USER');
 $clave = getenv('DB_PASS');
+$base_de_datos = getenv('DB_NAME');
 
 // Crear la conexión
-$conexion = new mysqli($servidor, $base_de_datos, $usuario, $clave);
+$conexion = new mysqli($servidor, $usuario, $clave, $base_de_datos);
 
 // Chequear errores
 if ($conexion->connect_errno) {
