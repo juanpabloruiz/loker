@@ -20,7 +20,7 @@ $resultado = $sentencia->get_result();
 
 <body>
 
-    <header class="my-3 mx-5">
+    <header class="py-3 px-5 bg-primary text-white">
         <h1>
             <i class="fa-solid fa-sack-dollar"></i>Loker
         </h1>
@@ -30,7 +30,7 @@ $resultado = $sentencia->get_result();
 
         <table class="table table-hover table-bordered">
 
-            <tr>
+            <tr class="table-dark">
                 <th class="text-center">CODIGO</th>
                 <th class="text-center">PRODUCTO</th>
                 <th class="text-center">COSTO</th>
@@ -47,7 +47,7 @@ $resultado = $sentencia->get_result();
                     <td><?= $fila['costo'] ?></td>
                     <td><?= $fila['precio'] ?></td>
                     <td><?= $fila['cantidad'] ?></td>
-                    <td><?= $fila['fecha'] ?></td>
+                    <td><?= date('d-m-y ⏰ H:i', strtotime($fila['fecha'])) ?></td>
                 </tr>
 
             <?php endwhile; ?>
