@@ -15,10 +15,16 @@ $resultado = $sentencia->get_result();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= titulo(); ?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" hrf="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
 
 <body>
+
+    <header class="my-3 mx-5">
+        <h1>
+            <i class="fa-solid fa-sack-dollar"></i>Loker
+        </h1>
+    </header>
 
     <main class="container my-3">
 
