@@ -28,15 +28,15 @@ $resultado = $sentencia->get_result();
 
     <main class="container my-3">
 
-        <table class="table table-hover">
+        <table class="table table-hover table-bordered">
 
             <tr>
-                <th>Código</th>
-                <th>Producto</th>
-                <th>Costo</th>
-                <th>Precio</th>
-                <th>Stock</th>
-                <th>Fecha</th>
+                <th class="text-center">CODIGO</th>
+                <th class="text-center">PRODUCTO</th>
+                <th class="text-center">COSTO</th>
+                <th class="text-center">PRECIO</th>
+                <th class="text-center">STOCK</th>
+                <th class="text-center">FECHA</th>
             </tr>
 
             <?php while ($fila = $resultado->fetch_assoc()): ?>
