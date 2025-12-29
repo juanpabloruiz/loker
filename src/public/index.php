@@ -1,11 +1,16 @@
 <?php
 
-require('conexion.php');
-require('funciones.php');
 
-$sentencia = $conexion->prepare("SELECT * FROM productos");
-$sentencia->execute();
-$resultado = $sentencia->get_result();
+
+
+require_once __DIR__ . '/../config/conexion.php';
+require_once __DIR__ . '/../config/funciones.php';
+
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,6 +33,8 @@ $resultado = $sentencia->get_result();
 
     <main class="container my-3">
 
+        <?php require_once __DIR__ . '/../admin/cats/new.php'; ?>
+
         <table class="table table-hover table-bordered">
 
             <tr class="table-dark">
@@ -39,7 +46,12 @@ $resultado = $sentencia->get_result();
                 <th class="text-center">FECHA</th>
             </tr>
 
-            <?php while ($fila = $resultado->fetch_assoc()): ?>
+            <?php
+            $sentencia = $conexion->prepare("SELECT * FROM productos");
+            $sentencia->execute();
+            $resultado = $sentencia->get_result();
+            while ($fila = $resultado->fetch_assoc()):
+            ?>
 
                 <tr>
                     <td><?= $fila['codigo'] ?></td>
